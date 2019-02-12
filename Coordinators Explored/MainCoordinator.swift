@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+    //MARK:- Handling navigation by making coordinator detect interactions with navController directly
+    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -19,6 +21,8 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = ViewController.instantiate()
         vc.coordinator = self
+        navigationController.delegate = self
+
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -34,6 +38,22 @@ class MainCoordinator: Coordinator {
         let vc = CreateAccountViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    //MARK:- Navigation detection/handling
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        //called by delegate when view controller has been shown
+        
+        guard let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
+        
+        //if vc array already has fromVC it its content, it's a push operation for a differnt view controller
+        if navigationController.viewControllers.contains(fromVC) {
+             return
+        }
+        
+        if let buyItemVC = fromVC as? BuyItemViewController {
+            childDidFinish(buyItemVC.coordinator!)
+        }
     }
     
     func childDidFinish(_ child: Coordinator) {

@@ -24,7 +24,7 @@ class BuyCoordinator: Coordinator {
     }
     
     //MARK:- Happens when the child coordinator is done with its work
-    func didFinishBuying() {
-        parentCoordinator?.childDidFinish(self)
-    }
+//    func didFinishBuying() {
+//        parentCoordinator?.childDidFinish(self)
+//    }
 }
