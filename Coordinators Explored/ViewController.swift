@@ -12,6 +12,9 @@ class ViewController: UIViewController, Storyboarded {
 
     weak var coordinator: MainCoordinator?
     
+    //MARK:- IBOutlets
+    @IBOutlet weak var productSegController: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,7 +23,7 @@ class ViewController: UIViewController, Storyboarded {
     //MARK:- IBActions
     
     @IBAction func purchaseTapped(_ sender: UIButton) {
-        coordinator?.buyItem()
+        coordinator?.buySubscription(to: productSegController.selectedSegmentIndex)
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {

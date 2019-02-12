@@ -10,7 +10,9 @@ import UIKit
 
 class BuyItemViewController: UIViewController, Storyboarded {
 
-    weak var coordinator: BuyCoordinator?
+    //weak var coordinator: BuyCoordinator?
+    weak var coordinator: MainCoordinator?
+    var selectedProduct = 0 //provide value when when vc is created
     
     override func viewDidLoad() {
         super.viewDidLoad()
