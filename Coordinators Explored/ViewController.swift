@@ -16,7 +16,18 @@ class ViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    //MARK:- IBActions
+    
+    @IBAction func purchaseTapped(_ sender: UIButton) {
+        coordinator?.buyItem()
+    }
+    
+    @IBAction func createAccountTapped(_ sender: UIButton) {
+        coordinator?.createAccount()
+    }
+    
+    
 
 }
 
