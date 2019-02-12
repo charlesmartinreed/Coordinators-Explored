@@ -9,7 +9,7 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var childCoordinator = [Coordinator]()
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -23,14 +23,26 @@ class MainCoordinator: Coordinator {
     }
     
     func buyItem() {
-        let vc = BuyItemViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        //making a child coordinator and assigning control to it
+       let child = BuyCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
     func createAccount() {
         let vc = CreateAccountViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func childDidFinish(_ child: Coordinator) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            //identity operator, check if two class instances point to the same memory, i.e, if they are the same object
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
     }
 }

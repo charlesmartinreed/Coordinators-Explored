@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol Coordinator {
-    var childCoordinator: [Coordinator] { get set }
+protocol Coordinator: AnyObject { //coordinators should be Classes
+    var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
     
     func start()

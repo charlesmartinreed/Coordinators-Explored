@@ -17,6 +17,7 @@
 		8C7809FE22124BC400DBCD09 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7809FD22124BC400DBCD09 /* Storyboarded.swift */; };
 		8C780A002212505600DBCD09 /* BuyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7809FF2212505600DBCD09 /* BuyItemViewController.swift */; };
 		8C780A022212506500DBCD09 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C780A012212506500DBCD09 /* CreateAccountViewController.swift */; };
+		8C780A04221251FC00DBCD09 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C780A03221251FC00DBCD09 /* BuyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8C7809FD22124BC400DBCD09 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		8C7809FF2212505600DBCD09 /* BuyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyItemViewController.swift; sourceTree = "<group>"; };
 		8C780A012212506500DBCD09 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		8C780A03221251FC00DBCD09 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				8C780A012212506500DBCD09 /* CreateAccountViewController.swift */,
 				8C7809F922124ABD00DBCD09 /* Coordinator.swift */,
 				8C7809FB22124B5D00DBCD09 /* MainCoordinator.swift */,
+				8C780A03221251FC00DBCD09 /* BuyCoordinator.swift */,
 				8C7809EB22124A9F00DBCD09 /* Main.storyboard */,
 				8C7809EE22124AA200DBCD09 /* Assets.xcassets */,
 				8C7809F022124AA200DBCD09 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				8C780A022212506500DBCD09 /* CreateAccountViewController.swift in Sources */,
 				8C780A002212505600DBCD09 /* BuyItemViewController.swift in Sources */,
 				8C7809EA22124A9F00DBCD09 /* ViewController.swift in Sources */,
+				8C780A04221251FC00DBCD09 /* BuyCoordinator.swift in Sources */,
 				8C7809FC22124B5D00DBCD09 /* MainCoordinator.swift in Sources */,
 				8C7809FE22124BC400DBCD09 /* Storyboarded.swift in Sources */,
 				8C7809E822124A9F00DBCD09 /* AppDelegate.swift in Sources */,
