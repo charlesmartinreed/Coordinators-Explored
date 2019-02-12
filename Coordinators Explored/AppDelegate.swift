@@ -16,12 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let navController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.start()
+//        let navController = UINavigationController()
+//        coordinator = MainCoordinator(navigationController: navController)
+//        coordinator?.start()
         
+        //When working with tab bar, we'll use an instance of our Tab Bar controller as the root view
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
+        window?.rootViewController = MainTabBarController()
         window?.makeKeyAndVisible()
         
         return true

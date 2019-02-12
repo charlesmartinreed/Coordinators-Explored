@@ -23,7 +23,7 @@ class ViewController: UIViewController, Storyboarded {
     //MARK:- IBActions
     
     @IBAction func purchaseTapped(_ sender: UIButton) {
-        coordinator?.buySubscription(to: productSegController.selectedSegmentIndex)
+        coordinator?.buyItem()
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {

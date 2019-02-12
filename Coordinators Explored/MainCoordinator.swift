@@ -20,31 +20,34 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         let vc = ViewController.instantiate()
+        //used with our MainTabBarController to handle tab bar navigation
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         vc.coordinator = self
         navigationController.delegate = self
 
         navigationController.pushViewController(vc, animated: false)
     }
     
-//    func buyItem() {
-//        //making a child coordinator and assigning control to it
-//       let child = BuyCoordinator(navigationController: navigationController)
-//        child.parentCoordinator = self
-//        childCoordinators.append(child)
-//        child.start()
-//    }
-    
-    func buySubscription(to productType: Int) {
-        let vc = BuyItemViewController.instantiate()
-        vc.selectedProduct = productType
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+    func buyItem() {
+        //making a child coordinator and assigning control to it
+       let child = BuyCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
+//    func buySubscription(to productType: Int) {
+//        let vc = BuyItemViewController.instantiate()
+//        vc.selectedProduct = productType
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: false)
+//    }
+    
     func createAccount() {
-        let vc = CreateAccountViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = CreateCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
     //MARK:- Navigation detection/handling

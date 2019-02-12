@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0FCA6B22136EB60004598C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0FCA6A22136EB60004598C /* MainTabBarController.swift */; };
+		8C0FCA6D221371B40004598C /* CreateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0FCA6C221371B40004598C /* CreateCoordinator.swift */; };
 		8C7809E822124A9F00DBCD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7809E722124A9F00DBCD09 /* AppDelegate.swift */; };
 		8C7809EA22124A9F00DBCD09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7809E922124A9F00DBCD09 /* ViewController.swift */; };
 		8C7809ED22124A9F00DBCD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7809EB22124A9F00DBCD09 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C0FCA6A22136EB60004598C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8C0FCA6C221371B40004598C /* CreateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCoordinator.swift; sourceTree = "<group>"; };
 		8C7809E422124A9F00DBCD09 /* Coordinators Explored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coordinators Explored.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7809E722124A9F00DBCD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C7809E922124A9F00DBCD09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,12 +71,14 @@
 			isa = PBXGroup;
 			children = (
 				8C7809E722124A9F00DBCD09 /* AppDelegate.swift */,
-				8C7809E922124A9F00DBCD09 /* ViewController.swift */,
-				8C7809FF2212505600DBCD09 /* BuyItemViewController.swift */,
-				8C780A012212506500DBCD09 /* CreateAccountViewController.swift */,
 				8C7809F922124ABD00DBCD09 /* Coordinator.swift */,
 				8C7809FB22124B5D00DBCD09 /* MainCoordinator.swift */,
+				8C7809E922124A9F00DBCD09 /* ViewController.swift */,
+				8C0FCA6A22136EB60004598C /* MainTabBarController.swift */,
 				8C780A03221251FC00DBCD09 /* BuyCoordinator.swift */,
+				8C7809FF2212505600DBCD09 /* BuyItemViewController.swift */,
+				8C0FCA6C221371B40004598C /* CreateCoordinator.swift */,
+				8C780A012212506500DBCD09 /* CreateAccountViewController.swift */,
 				8C7809EB22124A9F00DBCD09 /* Main.storyboard */,
 				8C7809EE22124AA200DBCD09 /* Assets.xcassets */,
 				8C7809F022124AA200DBCD09 /* LaunchScreen.storyboard */,
@@ -155,6 +161,8 @@
 			files = (
 				8C780A022212506500DBCD09 /* CreateAccountViewController.swift in Sources */,
 				8C780A002212505600DBCD09 /* BuyItemViewController.swift in Sources */,
+				8C0FCA6D221371B40004598C /* CreateCoordinator.swift in Sources */,
+				8C0FCA6B22136EB60004598C /* MainTabBarController.swift in Sources */,
 				8C7809EA22124A9F00DBCD09 /* ViewController.swift in Sources */,
 				8C780A04221251FC00DBCD09 /* BuyCoordinator.swift in Sources */,
 				8C7809FC22124B5D00DBCD09 /* MainCoordinator.swift in Sources */,
